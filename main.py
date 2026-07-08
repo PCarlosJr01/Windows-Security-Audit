@@ -1,13 +1,5 @@
-from checks.firewall import check_firewall
+from checks.firewall import run_firewall_audit
 
-def print_results(results):
-    status = results["status"]
-    name = results["name"]
-    message = results["message"]
-
-    print(f"[{status}] {name}")
-    print(f"       {message}")
-    print()
 
 def main():
     print("=" * 50)
@@ -15,9 +7,8 @@ def main():
     print("=" * 50)
     print()
 
-    results = check_firewall()
+    run_firewall_audit()
 
-    print_results(results)
 
 if __name__ == "__main__":
     main()

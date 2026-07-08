@@ -1,4 +1,4 @@
-from checks import check_firewall
+from checks.firewall import check_firewall
 
 def print_results(results):
     status = results["status"]
